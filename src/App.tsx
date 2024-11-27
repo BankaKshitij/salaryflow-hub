@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Landing from "./pages/Landing";
 import Login from "./pages/auth/Login";
+import EmployeeDashboard from "./pages/employee/Dashboard";
+import EmployeeDocuments from "./pages/employee/Documents";
+import WithdrawFunds from "./pages/employee/WithdrawFunds";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +22,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/auth/login" element={<Login />} />
-            {/* Add protected routes later */}
+            <Route path="/employee/dashboard" element={<EmployeeDashboard />} />
+            <Route path="/employee/documents" element={<EmployeeDocuments />} />
+            <Route path="/employee/withdraw" element={<WithdrawFunds />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
