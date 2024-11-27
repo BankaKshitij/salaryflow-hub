@@ -9,6 +9,11 @@ import Login from "./pages/auth/Login";
 import EmployeeDashboard from "./pages/employee/Dashboard";
 import EmployeeDocuments from "./pages/employee/Documents";
 import WithdrawFunds from "./pages/employee/WithdrawFunds";
+import EmployerDashboard from "./pages/employer/Dashboard";
+import EmployerTeams from "./pages/employer/Teams";
+import AdminDashboard from "./pages/admin/Dashboard";
+import AdminOrganizations from "./pages/admin/Organizations";
+import AdminRequests from "./pages/admin/Requests";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +30,11 @@ const App = () => (
             <Route path="/employee/dashboard" element={<EmployeeDashboard />} />
             <Route path="/employee/documents" element={<EmployeeDocuments />} />
             <Route path="/employee/withdraw" element={<WithdrawFunds />} />
+            <Route path="/employer/dashboard" element={<EmployerDashboard />} />
+            <Route path="/employer/teams" element={<EmployerTeams />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/organizations" element={<AdminOrganizations />} />
+            <Route path="/admin/requests" element={<AdminRequests />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
